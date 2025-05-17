@@ -9,8 +9,18 @@ const obj1 = new construct('Niharika', '2400');
 console.log(typeof obj1);
 console.log(obj1);
 console.log(obj1['Username'])
-// let {Username, uid} = obj1;
-// console.log(Username);
+let {Username, uid} = obj1;
+console.log(Username);
+
+
+
+// Instanceof
+// function constructIt(myName){
+//     this.myName = myName;
+// }
+// const p = new constructIt('Ninaa');
+// console.log(p instanceof constructIt);
+// console.log(p)
 
 
 
@@ -33,10 +43,12 @@ console.log(obj1['Username'])
 
 
 
+
+
 // Interesting
 
 // try to create an instance without new keyword
-// Use prototype for method sharing so that 
+// Use prototype for method sharing so that each time extra method won't be created for no use
 
 // function Animal(fName){
 //     this.fName = fName;
@@ -55,7 +67,10 @@ console.log(obj1['Username'])
 // myAn.greet();
 
 
+
+
 // use ES6 classes for constructor
+// This is also memory efficient as method will be called when necessary
 
 // class createObj{
 //     constructor(myName){
@@ -70,3 +85,19 @@ console.log(obj1['Username'])
 // console.log(classObj);
 // console.log(typeof classObj);
 // classObj.drive();
+
+
+
+
+
+// If you return object manually, it will overrise the implicit created by new
+
+// function constructSomething(nName){
+//     this.nName = nName;
+//     return ({nName: 'Niharika'})
+// }
+// const obj1 = new constructSomething('Niha');
+// console.log(obj1)
+// console.log(obj1 instanceof constructSomething) // will it be instance of constructSomething???
+
+
