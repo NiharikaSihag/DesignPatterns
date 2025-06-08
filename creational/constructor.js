@@ -50,21 +50,26 @@ console.log(Username);
 // try to create an instance without new keyword
 // Use prototype for method sharing so that each time extra method won't be created for no use
 
-// function Animal(fName){
-//     this.fName = fName;
-// }
-// Animal.prototype.greet = function(){
-//     console.log(`Heyyy ${this.fName}`)
-// }
-// const animal = Animal('Dog');
-// // console.log(animal.fName);
-// console.log(fName);
-// console.log(animal);
-// // animal.greet();
-// const myAn =  new Animal('cat');
-// console.log(myAn.fName);
-// console.log(fName);
-// myAn.greet();
+
+Animal.prototype.greet = function(){
+    console.log(`Heyyy ${this.fName}`)
+}
+
+
+function Animal(fName){
+    this.fName = fName;
+}
+const animal = Animal('Dog');
+// console.log(animal.fName);
+console.log(fName);
+console.log(animal instanceof Animal)
+console.log(animal);
+// animal.greet();
+const myAn =  new Animal('cat');
+console.log(myAn.fName);
+console.log(fName);
+console.log(myAn instanceof Animal)
+myAn.greet();
 
 
 
